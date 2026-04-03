@@ -1,0 +1,142 @@
+.membership-section {
+  background-color: var(--bg-light);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.membership-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 5rem;
+}
+
+.plan-card {
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.plan-card.popular {
+  transform: scale(1.05);
+  border-color: var(--primary);
+  box-shadow: 0 0 20px rgba(255, 59, 48, 0.2);
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+}
+
+.plan-card.popular:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--primary);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.plan-card h3 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.price span {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-family: 'Outfit', sans-serif;
+}
+
+.plan-features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.plan-features li {
+  color: #ccc;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+.plan-btn {
+  width: 100%;
+}
+
+.why-choose-us {
+  margin-top: 4rem;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.reason-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(10, 10, 10, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 3px solid var(--primary);
+}
+
+.reason-number {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  color: rgba(255, 59, 48, 0.3);
+  font-weight: bold;
+}
+
+.reason-text h4 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.reason-text p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .plan-card.popular {
+    transform: scale(1);
+  }
+  .plan-card.popular:hover {
+    transform: translateY(-10px);
+  }
+}

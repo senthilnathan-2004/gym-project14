@@ -1,0 +1,112 @@
+.game-section {
+  background-color: var(--bg-dark);
+  border-top: 1px solid rgba(255, 59, 48, 0.1);
+  text-align: center;
+}
+
+.game-description {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.game-board {
+  max-width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 59, 48, 0.2);
+  background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.game-start-screen,
+.game-over-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.game-start-screen h3,
+.game-over-screen h3 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.game-over-screen p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.game-over-screen span {
+  color: var(--primary);
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+}
+
+.game-message {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.game-hud {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.hud-item {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.hud-item span {
+  color: var(--primary);
+}
+
+.game-target {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px var(--primary);
+  animation: pulseNeon 2s infinite;
+  transition: top 0.1s ease, left 0.1s ease;
+}
+
+.game-target:active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.target-inner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff6b6b 0%, #d80000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
